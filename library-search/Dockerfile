@@ -9,7 +9,7 @@ RUN sed -ri 's/Options Indexes FollowSymLinks/Options Indexes FollowSymLinks Exe
 
 WORKDIR /tmp
 
-RUN git clone https://gitlab.com/mfurukawa/library-search.git
+RUN git clone https://github.com/abacl7/library-search.git
 
 RUN mv /tmp/library-search/cgi-bin/*.cgi /var/www/cgi-bin/
 
