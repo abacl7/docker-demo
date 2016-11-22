@@ -15,3 +15,6 @@ Docker demo containers.
   - when build this container, please specify App Key. api key will inject to app code.
     - please take care about your api key. it will inject to python code.everyone can read it!
   - ex. #docker build --build-arg api_key=[your api key from https://calil.jp/doc/api.html ]
+  
+  - This container push to DockerHub. you can pull by  docker pull abacl7/docker-demo.
+  - this public container no include api_key.please inject api_key by yourself.
