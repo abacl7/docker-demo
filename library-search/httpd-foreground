@@ -1,6 +1,11 @@
 #!/bin/sh
 set -e
 
+# add api key if specify
+if [ ! -z ${API_KEY} ]; then
+  sed -ri s/YOUR_API_KEY/${API_KEY}/g /var/www/cgi-bin/search-library.cgi
+fi
+
 # Apache gets grumpy about PID files pre-existing
 #rm -f /usr/local/apache2/logs/httpd.pid
 if [ -e /run/httpd/httpd.pid ]; then

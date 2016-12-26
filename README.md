@@ -12,9 +12,8 @@ Docker demo containers.
   - Apache2 sample include demo web app.
   - demo app clone from https://github.com/abacl7/library-search.git
   - http://[Container Host IP]:[Specified Port]/ show app index.html
-  - when build this container, please specify App Key. api key will inject to app code.
+  - when running this container, please specify App Key by "-env API_KEY=<YOURKEY>" in docker run args. api key will inject to app code.
     - please take care about your api key. it will inject to python code.everyone can read it!
-  - ex. #docker build --build-arg api_key=[your api key from https://calil.jp/doc/api.html ]
-  
+  - ex. #docker run --env API_KEY=[your api key from https://calil.jp/doc/api.html ] -d -p 80:80 abacl7/docker-demo:latest
+
   - This container push to DockerHub. you can pull by  docker pull abacl7/docker-demo.
-  - this public container no include api_key.please inject api_key by yourself.
